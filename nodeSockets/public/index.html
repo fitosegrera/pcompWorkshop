@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src='//localhost:3300/socket.io/socket.io.js'></script>
+</head>
+<body>
+  <script>
+    var socket = io.connect('//localhost:3300');
+    socket.on('sensor1', function() {
+        document.getElementById("data").innerHTML = arguments[0];
+        console.log(arguments)
+    });
+    </script>
+    <p id='data'></p>
+</body>
+
+</html>
